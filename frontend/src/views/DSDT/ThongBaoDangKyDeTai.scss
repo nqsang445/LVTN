@@ -1,0 +1,23 @@
+.main-thongbao {
+    .main-thongbao-content {
+        border: solid;
+        margin: 0 auto;
+        width: 60%;
+        text-align: center;
+        .danhsachthongbao {
+            margin-top: 10px;
+            list-style: none;
+            li {
+                cursor: pointer;
+                margin-bottom: 20px;
+                color: rgb(108, 108, 233);
+                &:hover {
+                    color: red;
+                }
+                &:active {
+                    color: yellow;
+                }
+            }
+        }
+    }
+}

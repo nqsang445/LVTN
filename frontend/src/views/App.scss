@@ -1,0 +1,186 @@
+.admin-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background: rgb(241, 236, 236);
+    .admin-left {
+        border: none;
+        outline: none;
+        width: 15%;
+        height: fit-content;
+        margin-left: 1%;
+        margin-top: 2%;
+        top: 5%;
+        position: sticky;
+        background: linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25));
+        border-radius: 10px;
+        color: white;
+        .admin-left-content-header {
+            // padding-top: 10px;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            color: white;
+            .admin-left-header {
+                margin-top: 5%;
+                text-align: center;
+            }
+            .icon-admin-left-content-header {
+                margin-top: 6px;
+                margin-right: 10px;
+                width: 30px;
+                height: 40px;
+            }
+        }
+        .menu{
+            .main-menu{
+                .sidebar a {
+                    color: white ;
+                   
+                }
+            }
+        }
+        .main-menu {
+            .menu-item {
+
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                cursor: pointer;
+                &:hover {
+                    background: rgb(221, 216, 216);
+                    color: black;
+                }
+                &:active {
+                    background: red;
+                }
+                
+            }
+            .sub-menu {
+                color: white;
+
+                .item {
+                    cursor: pointer;
+                    text-align: center;
+                    margin-left: 10%;
+
+                    &:hover {
+                        background: rgb(221, 216, 216);
+                        color: black;
+                    }
+                    &:active {
+                        background: red;
+                    }
+                    .isActiveLink {
+                        text-decoration: none;
+                        color: Red;
+                    }
+                    .isnotActiveLink {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    .admin-right {
+        width: 81%;
+        margin-left: 3%;
+        height: 2000px;
+        .admin-header {
+            background: rgb(241, 236, 236);
+            height: 60px;
+            top: 0.1%;
+            position: sticky;
+            display: flex;
+            justify-content: space-between;
+            .admin-header-right-content-left {
+                width: 30%;
+                padding-top: 12px;
+            }
+            .admin-header-right-content-right {
+                width: 20%;
+                display: flex;
+                justify-content: space-between;
+                padding-top: 12px;
+                .content-right-text-rigt {
+                    .content-right-text-rigt-left {
+                        cursor: pointer;
+                    }
+                    .icon-dropdown {
+                        margin-top: -15px;
+                        width: 30px;
+                        height: 30px;
+                        cursor: pointer;
+                        &:hover {
+                            background: rgb(221, 216, 216);
+                            &:active {
+                                background: red;
+                            }
+                        }
+                    }
+                    .showInfoUser {
+                        .showInfoUser-item {
+                            cursor: pointer;
+                            &:hover {
+                                background: rgb(221, 216, 216);
+                            }
+                            &:active {
+                                background: red;
+                            }
+                        }
+                        .sidebar {
+                            margin: 0;
+                            padding: 0;
+                            width: 100%;
+                            height: 100%;
+                            overflow: auto;
+                        }
+
+                        .sidebar a {
+                            display: block;
+                            color: black;
+                            padding: 16px;
+                            text-decoration: none;
+                        }
+
+                        .sidebar a:hover:not(.active) {
+                            background-color: #555;
+                            color: white;
+                        }
+
+                        @media screen and (max-width: 700px) {
+                            .sidebar {
+                                width: 100%;
+                                height: auto;
+                                position: relative;
+                            }
+                            .sidebar a {
+                                float: left;
+                            }
+                            div.content {
+                                margin-left: 0;
+                            }
+                        }
+
+                        @media screen and (max-width: 400px) {
+                            .sidebar a {
+                                text-align: center;
+                                float: none;
+                            }
+                        }
+                    }
+                }
+                .icon-logout {
+                    margin-top: 4%;
+                    width: 30px;
+                    height: 30px;
+                    cursor: pointer;
+                    &:active {
+                        background: red;
+                    }
+                }
+            }
+        }
+    }
+}

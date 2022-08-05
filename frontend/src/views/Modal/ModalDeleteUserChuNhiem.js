@@ -1,0 +1,33 @@
+import React from "react";
+import axios from "axios";
+import {
+    Button, Modal, ModalFooter,
+    ModalHeader, ModalBody
+} from "reactstrap";
+function ModalDeleteUserChuNhiem({ setOpenModalDeleteUserChuNhiem, openModalDeleteUserChuNhiem, deleteChuNhiem, doDeleteUserId }) {
+    //toggle chi danh cho toggle modal
+    const toggle = () => setOpenModalDeleteUserChuNhiem(!openModalDeleteUserChuNhiem);
+    // console.log(deleteSVCL);
+    let deletUserId = async () => {
+        try {
+            await doDeleteUserId(deleteChuNhiem);
+            setOpenModalDeleteUserChuNhiem(!openModalDeleteUserChuNhiem);
+        } catch (e) {
+            console.log(e)
+        }
+    }
+    return (
+        <Modal isOpen={openModalDeleteUserChuNhiem} toggle={toggle}>
+            <ModalHeader
+                onClick={toggle} >Xóa thông tin thành viên hội dồng</ModalHeader>
+            <ModalBody>
+                Hành động này sẽ xóa vĩnh viễn, bạn có chắc chắn?.
+            </ModalBody>
+            <ModalFooter>
+                <Button color="danger" onClick={deletUserId}  >Xóa</Button>
+                <Button color="primary" onClick={toggle} >Cancel</Button>
+            </ModalFooter>
+        </Modal>
+    );
+}
+export default ModalDeleteUserChuNhiem;

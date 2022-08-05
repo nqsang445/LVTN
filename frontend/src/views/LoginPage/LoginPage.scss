@@ -1,0 +1,58 @@
+.login-background {
+    background-image: url(../../assets/images/dhct.jpg);
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+
+    .text-login {
+        height: 350px;
+        width: 500px;
+        position: relative;
+        margin-top: 10%;
+        .text-login-span {
+            color: rgb(240, 10, 10);
+            font-size: 20px;
+        }
+        .text-login-p1 {
+            color: rgb(87, 87, 221);
+            font-size: 50px;
+            margin-top: 10%;
+        }
+        .text-login-p2 {
+            color: rgb(87, 87, 221);
+            font-size: 50px;
+            float: right;
+            padding-right: 10%;
+        }
+    }
+    .login-container {
+        height: 350px;
+        width: 300px;
+        position: relative;
+        margin-top: 10%;
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 10px;
+        .login-text {
+            font-size: 20px;
+            font-weight: 600;
+            padding-top: 15px;
+        }
+        .login-input {
+            margin: 10px 0;
+        }
+        .btn-login {
+            border: none;
+            outline: none;
+            cursor: pointer;
+            width: 60%;
+            height: 35px;
+            border-radius: 10px;
+            color: white;
+            background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+        }
+        .color {
+            color: red;
+        }
+    }
+}
